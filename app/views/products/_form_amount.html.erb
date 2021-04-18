@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :amount_diff %>
-    <%= form.number_field :amount_diff, min: 0, max: product.amount %>
+    <%= form.number_field :amount_diff, min: 0, max: amount_action.eql?(:cut_amount) ? product.amount : nil %>
   </div>
 
   <div class="field">
